@@ -8,7 +8,7 @@ from ai_generator import generate_clinical_summary
 
 # --- APP CONFIG ---
 st.set_page_config(
-    page_title="Patient Risk Analytics", 
+    page_title="AI-Driven Patient Risk Intelligence", 
     layout="wide", 
     page_icon="🩺",
     initial_sidebar_state="collapsed"
@@ -246,7 +246,7 @@ dashboard_html = f"""
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Patient Risk Analytics</title>
+    <title>AI-Driven Patient Risk Intelligence</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <!-- Chart.js -->
@@ -315,7 +315,7 @@ dashboard_html = f"""
                 <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
                     <span class="material-symbols-outlined text-xl">monitor_heart</span>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-gray-900">Patient Risk Analytics.</span>
+                <span class="text-xl font-bold tracking-tight text-gray-900">AI-Driven Patient Risk Intelligence.</span>
             </div>
             
             <nav class="hidden md:flex items-center bg-gray-100/50 p-1 rounded-xl">

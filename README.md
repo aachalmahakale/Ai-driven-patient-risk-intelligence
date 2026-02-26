@@ -2,8 +2,8 @@
 
 > **Bridging Clinical Care & Data Science**
 
-## 📌 Project Overview
-Healthcare providers are overwhelmed with data but starved for actionable insights. **Patient Risk Analytics** is a unified dashboard that transforms raw medical billing codes (ICD-10 & CPT) into a comprehensive, predictive view of patient health.
+##  Project Overview
+Healthcare providers are overwhelmed with data but starved for actionable insights. **AI-Driven Patient Risk Intelligence** is a unified dashboard that transforms raw medical billing codes (ICD-10 & CPT) into a comprehensive, predictive view of patient health.
 
 Built with a focus on **Precision Medicine**, this tool stratifies patient populations by risk, visualizes financial impact, and uses AI to generate simulated clinical care plans.
 
@@ -14,25 +14,25 @@ Built with a focus on **Precision Medicine**, this tool stratifies patient popul
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
-### 1. Population Health Command Center 🏥
+### 1. Population Health Command Center 
 - **Real-Time Risk Stratification:** instantly identifies High, Moderate, and Healthy cohorts (e.g., "18.7% High Risk").
 - **Financial Forecasting:** Projects revenue ($3.2M) based on standard Medicare CPT fee schedules.
 - **Top Condition Analysis:** Visualizes the prevalence of chronic drivers like Hypertension and Diabetes using ICD-10 data.
 
-### 2. AI-Powered Patient 360° 🧠
+### 2. AI-Powered Patient 360° 
 - **Clinical Summary Generation:** Transforms structured data into a narrative clinical summary for rapid review.
 - **Patient Journey Timeline:** Interactive visualization of a patient's encounter history (ER visits vs. Checkups).
 - **Care Gap Detection:** deterministic rules engine flags missing standard-of-care procedures (e.g., missing HbA1c for diabetics).
 
-### 3. Predictive Risk Simulator 🔮
+### 3. Predictive Risk Simulator 
 - **Interactive "What-If" Analysis:** Clinicians can simulate interventions (Medication Adherence, Lifestyle Changes) using sliders.
 - **Dynamic Modeling:** The Radar Chart updates in real-time to show the *projected* reduction in Utilization and Clinical Risk.
 
 ---
 
-## 🛠️ Technical Architecture
+##  Technical Architecture
 
 ### Tech Stack
 - **Frontend / UI:** [Streamlit](https://streamlit.io/) (Python-based web framework)
@@ -48,7 +48,7 @@ The system integrates three core datasets:
 
 ---
 
-## 💻 How to Run Locally
+##  How to Run Locally
 
 1.  **Clone the Repository**
     ```bash
@@ -68,14 +68,14 @@ The system integrates three core datasets:
 
 ---
 
-## 🔮 Future Roadmap
+##  Future Roadmap
 - [ ] **EHR Integration:** Connect to Epic/Cerner via FHIR standards.
 - [ ] **Genomic Risk Scoring:** Incorporate Polygenic Risk Scores (PRS) for personalized medicine.
 - [ ] **RAG Implementation:** Upgrade AI summary to use Retrieval-Augmented Generation on unstructured clinical notes.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 **Aachal**  
 *B.Pharm | MS in Bioinformatics & Data Science*  
 Passionate about leveraging data to improve patient outcomes.
