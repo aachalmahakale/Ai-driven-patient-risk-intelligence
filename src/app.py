@@ -6,6 +6,14 @@ import json
 import plotly.graph_objects as go
 from ai_generator import generate_clinical_summary
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
+
+def load_csv(file_name):
+    return pd.read_csv(os.path.join(DATA_DIR, file_name))
+
+
 # --- APP CONFIG ---
 st.set_page_config(
     page_title="AI-Driven Patient Risk Intelligence", 
@@ -52,7 +60,7 @@ try:
         )
         
         # 2. Condition Filter (Top 10 for brevity)
-        all_conditions = ["All"] + list(pd.read_csv('data/diagnoses.csv')['icd_description'].value_counts().head(10).index)
+        all_conditions = ["All"] + list(load_csv('diagnoses.csv')['icd_description'].value_counts().head(10).index)
         selected_condition = st.selectbox("Filter by Primary Diagnosis", all_conditions)
 
         st.markdown("---")
@@ -60,7 +68,7 @@ try:
         
         # 3. CSV Download Setup
         # Prepare the CSV string
-        csv_data = pd.read_csv('data/patients_enriched.csv')
+        csv_data = load_csv('patients_enriched.csv')
         # Filter strictly for HIGH RISK
         high_risk_csv = csv_data[csv_data['risk_segment'] == "High Risk"].to_csv(index=False).encode('utf-8')
         
@@ -85,10 +93,10 @@ try:
 
     # --- FILTER LOGIC ---
     # Reload data for filtering
-    patients = pd.read_csv('data/patients_enriched.csv')
-    procedures = pd.read_csv('data/procedures.csv')
-    diagnoses = pd.read_csv('data/diagnoses.csv')
-    encounters = pd.read_csv('data/encounters.csv')
+    patients = load_csv('patients_enriched.csv')
+    procedures = load_csv('procedures.csv')
+    diagnoses = load_csv('diagnoses.csv')
+    encounters = load_csv('encounters.csv')
 
     # Apply Risk Filter
     if selected_risk:
